@@ -28,8 +28,9 @@ export default function Scroll() {
         <span onClick={() => changeSelection(1)}>Catalogue</span>{" "}
         <span>Contact</span>
       </div>
-      <div ref={input}>
-        <h2 class="div p-10 m-10">hello</h2>
+      <div class="prose" ref={input}>
+        <h2>hello</h2>
+        <p>hoho</p>
         <h2 class="div p-10 m-10">hello</h2>
         <h2 class="div p-10 m-10">hello</h2>
         <h2 class="div p-10 m-10">hello</h2>
