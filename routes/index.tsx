@@ -1,32 +1,26 @@
 import { Head } from "$fresh/runtime.ts";
 import { useSignal } from "@preact/signals";
+import { useEffect, useRef } from "preact/hooks";
 import Counter from "../islands/Counter.tsx";
+import { Chart } from "$fresh_charts/mod.ts";
+import { ChartColors, transparentize } from "$fresh_charts/utils.ts";
+import Scroll from "../islands/Scroll.tsx";
 
 export default function Home() {
   const count = useSignal(3);
+  const selected = useSignal(null);
+  const input = useRef(null);
+
+  useEffect(() => {
+    console.log(input);
+  });
+
   return (
     <>
       <Head>
         <title>fresh-project</title>
       </Head>
-      <button className="btn btn-primary">Neutral</button>
-      <div class="px-4 py-8 mx-auto bg-[#86efac]">
-        <div class="max-w-screen-md mx-auto flex flex-col items-center justify-center">
-          <img
-            class="my-6"
-            src="/logo.svg"
-            width="128"
-            height="128"
-            alt="the fresh logo: a sliced lemon dripping with juice"
-          />
-          <h1 class="text-4xl font-bold">Welcome to fresh</h1>
-          <p class="my-4">
-            Try updating this message in the
-            <code class="mx-2">./routes/index.tsx</code> file, and refresh.
-          </p>
-          <Counter count={count} />
-        </div>
-      </div>
+      <Scroll />
     </>
   );
 }

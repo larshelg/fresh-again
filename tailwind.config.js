@@ -1,4 +1,4 @@
-/** @type {import('https://esm.sh/tailwindcss@3.1.8').Config} */
+/** @type {import('https://esm.sh/tailwindcss@3.5.1').Config} */
 
 module.exports = {
   content: [
